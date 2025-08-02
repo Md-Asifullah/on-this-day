@@ -8,7 +8,7 @@ export default function Header() {
         <p className="text-lg">
           Find out what happened on today's date throughout history
         </p>
-        <Button text="Surprise Me" />
+        <Button text="Surprise Me" classes="hover:bg-red-800" />
       </div>
     </section>
   );

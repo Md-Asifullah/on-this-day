@@ -1,6 +1,9 @@
-export default function Button({ text }) {
+export default function Button({ text, classes = "", onClick }) {
   return (
-    <button className="bg-black text-white px-12 py-2 rounded-sm font-semibold hover:bg-red-800 transition cursor-pointer">
+    <button
+      onClick={onClick}
+      className={`bg-black px-12 py-2 rounded-sm font-semibold transition cursor-pointer ${classes}`}
+    >
       {text}
     </button>
   );
