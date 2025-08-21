@@ -1,14 +1,11 @@
 import EventCard from "./EventCard";
 
-export default function Events() {
+export default function Events({ events }) {
   return (
     <>
-      <EventCard />
-      <EventCard />
-      <EventCard />
-      <EventCard />
-      <EventCard />
-      <EventCard />
+      {events.map((event, index) => (
+        <EventCard key={index} event={event} />
+      ))}
     </>
   );
 }
