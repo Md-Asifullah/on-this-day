@@ -2,18 +2,18 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-export default function Carousel() {
+export default function Carousel({ carouselEvents }) {
   const slides = [
     {
-      text: "On this day: A major event changed the course of history.",
+      text: `On this day: ${carouselEvents[0]?.text}`,
       bg: "bg-green-800",
     },
     {
-      text: "Did you know? This date is tied to a famous invention.",
+      text: `Did you know on this day? ${carouselEvents[1]?.text}`,
       bg: "bg-red-800",
     },
     {
-      text: "Historic fact: A great leader was born on this day.",
+      text: `Historic fact on this day: ${carouselEvents[2]?.text}`,
       bg: "bg-black",
     },
   ];
@@ -23,7 +23,7 @@ export default function Carousel() {
       <div className="w-full md:w-2/3">
         <Swiper
           modules={[Autoplay]}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          autoplay={{ delay: 6000, disableOnInteraction: false }}
           loop={true}
           spaceBetween={10}
           slidesPerView={1}

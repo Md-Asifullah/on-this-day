@@ -1,5 +1,21 @@
 import Button from "./Button";
-export default function Header() {
+export default function Header({ setDate }) {
+  function randomDate(start, end) {
+    return new Date(
+      start.getTime() + Math.random() * (end.getTime() - start.getTime())
+    );
+  }
+
+  const start = new Date(2025, 0, 1);
+  const end = new Date(2025, 11, 31);
+
+  function handleSurpriseMeButton() {
+    const randDate = randomDate(start, end);
+    const day = randDate.getDate();
+    const month = randDate.getMonth() + 1;
+    setDate({ month: month, day: day });
+  }
+
   return (
     <section className="bg-green-800 w-full py-12 text-white">
       <div className="max-w-2xl mx-auto text-center flex flex-col items-center space-y-6">
@@ -8,7 +24,11 @@ export default function Header() {
         <p className="text-lg">
           Find out what happened on today's date throughout history
         </p>
-        <Button text="Surprise Me" classes="hover:bg-red-800" />
+        <Button
+          onClick={handleSurpriseMeButton}
+          text="Surprise Me"
+          classes="hover:bg-red-800"
+        />
       </div>
     </section>
   );

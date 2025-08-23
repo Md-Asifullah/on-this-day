@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 
 import Button from "./Button";
 
-export default function DateFilter() {
+export default function DateFilter({ setDate }) {
   const day = useRef(null);
   const [monthClicked, setMonthClicked] = useState(null);
   const activeClasses = "bg-red-800 text-white";
@@ -27,8 +27,8 @@ export default function DateFilter() {
     setMonthClicked(month);
   }
 
-  function handleAPICall() {
-    alert(`Month: ${monthClicked}, Day: ${day.current.value}`);
+  function handleButtonClick() {
+    setDate({ month: monthClicked + 1, day: day.current.value });
   }
 
   return (
@@ -60,7 +60,7 @@ export default function DateFilter() {
           <Button
             text="View Events"
             classes="w-1/2 bg-yellow-500 text-black hover:bg-black hover:text-white"
-            onClick={() => handleAPICall()}
+            onClick={() => handleButtonClick()}
           />
         </div>
       </div>
