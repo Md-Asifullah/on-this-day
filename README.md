@@ -2,7 +2,7 @@
 
 Welcome to **On This Day**, a modern React-based interactive app that brings history to life by highlighting key events that happened on any given date.
 
-Check it out live 👉 **[On This Day App](https://your-live-link.netlify.app/)**
+Check it out live 👉 **[On This Day App](https://on-this-day-v1.netlify.app/)**
 
 ---
 
@@ -49,7 +49,7 @@ Want to check it out locally? Follow these steps:
 1. **Clone this repository**
 
    ```sh
-   git clone https://github.com/your-username/on-this-day.git
+   git clone https://github.com/Md-Asifullah/on-this-day.git
    cd on-this-day
    ```
 
