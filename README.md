@@ -31,7 +31,7 @@ Check it out live 👉 **[On This Day App](https://your-live-link.netlify.app/)*
 
 ## 📸 Screenshot
 
-![On This Day Screenshot](assets/screenshot.jpg)
+![On This Day Screenshot](src/assets/screenshot.jpg)
 
 ---
 
